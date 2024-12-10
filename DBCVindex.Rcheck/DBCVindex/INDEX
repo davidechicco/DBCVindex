@@ -1,0 +1,8 @@
+compute_pair_to_pair_dists
+                        Function to compute pairwise distances and
+                        ensure matrix format
+dbcv                    Function that calculates the Density-Based
+                        Clustering Validation index (DBCV) of
+                        clustering results
+remove_duplicates       Function to remove duplicate samples from the
+                        input data
