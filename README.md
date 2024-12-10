@@ -17,8 +17,7 @@ You can install the `DBCVindex` package and its dependencies from CRAN, and load
     list.of.packages <- c("pacman")
     new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
     if(length(new.packages)) install.packages(new.packages, repos='http://cran.us.r-project.org')
-    library("pacman")
-    p_load("DBCVindex")
+
 
 ## Execution instructions ##
 
@@ -27,7 +26,12 @@ To run `DBCVindex()`,  you need a data parameter and its associated clustering l
 ## An example ##
 An example on a random matrix:
 
-    n = 300; noise = 0.05; seed = 1782;
+    library("pacman")
+    p_load("DBCVindex")
+
+    n = 300
+    noise = 0.05
+    seed = 1782;
     theta <- seq(0, pi, length.out = n / 2)
     x1 <- cos(theta) + rnorm(n / 2, sd = noise)
     y1 <- sin(theta) + rnorm(n / 2, sd = noise)
