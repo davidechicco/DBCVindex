@@ -11,10 +11,12 @@ To run `DBCVindex()`, you need to have the following programs and packages insta
 * R (version > 4.0)
 * R packages: `Matrix` `pacman` `stats`
 
-You can install the `easyDifferentialGeneCoexpression` package and its dependencies from CRAN, and load it, with the following commands typed in the `R` terminal console:
+You can install the `DBCVindex` package and its dependencies from CRAN, and load it, with the following commands typed in the `R` terminal console:
 
     R
-    install.packages("pacman", repos='http://cran.us.r-project.org')
+    list.of.packages <- c("pacman")
+    new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+    if(length(new.packages)) install.packages(new.packages, repos='http://cran.us.r-project.org')
     library("pacman")
     p_load("DBCVindex")
 
