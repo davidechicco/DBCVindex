@@ -2,7 +2,7 @@
 
 ## Summary ##
 
-R package that computes the Density-Based Clustering Validation index (DBCV) index of clustering results, following the <https://github.com/FelSiq/DBCV> Python implementation by Felipe Alves Siqueira ([@FelSiq]).
+R package that computes the Density-Based Clustering Validation index (DBCV) index of clustering results, following the <https://github.com/FelSiq/DBCV> Python implementation by Felipe Alves Siqueira (@FelSiq).
 
 ## Installation ##
 
