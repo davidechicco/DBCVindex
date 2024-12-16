@@ -16,7 +16,7 @@ dbcv(data, labels, metric = "euclidean", noise_id = -1)
 \item{noise_id}{the code of the noise cluster points, -1 by default}
 }
 \value{
-a real value containing the Saturn coefficient
+a real value containing the DBCV coefficient in the [-1;+1] interval
 }
 \description{
 Function that calculates the Density-Based Clustering Validation index (DBCV) of clustering results

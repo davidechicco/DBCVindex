@@ -1,0 +1,4 @@
+name	user	system	elapsed
+compute_pair_to_pair_dists	0.004	0.000	0.005	
+dbcv	0.004	0.000	0.004	
+remove_duplicates	0.002	0.001	0.003	

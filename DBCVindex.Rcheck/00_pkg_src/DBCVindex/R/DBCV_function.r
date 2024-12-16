@@ -56,7 +56,7 @@ remove_duplicates <- function(data, labels) {
 #' @param noise_id the code of the noise cluster points, -1 by default
 #' @export
 #' @import Matrix
-#' @return a real value containing the Saturn coefficient
+#' @return a real value containing the DBCV coefficient in the [-1;+1] interval
 #' @examples
 #'
 #' n = 300; noise = 0.05; seed = 1782;
