@@ -4,16 +4,14 @@
 \alias{dbcv}
 \title{Function that calculates the Density-Based Clustering Validation index (DBCV) of clustering results}
 \usage{
-dbcv(data, labels, metric = "euclidean", noise_id = -1)
+dbcv(data, partition, noiseLabel = -1)
 }
 \arguments{
 \item{data}{input clustering results}
 
-\item{labels}{labels of the clustering}
+\item{partition}{labels of the clustering}
 
-\item{metric}{metric of the distance, Euclidean by default}
-
-\item{noise_id}{the code of the noise cluster points, -1 by default}
+\item{noiseLabel}{the code of the noise cluster points, -1 by default}
 }
 \value{
 a real value containing the DBCV coefficient in the [-1;+1] interval
@@ -23,8 +21,9 @@ Function that calculates the Density-Based Clustering Validation index (DBCV) of
 }
 \examples{
 
-n = 300; noise = 0.05; seed = 1782;
-theta <- seq(0, pi, length.out = n / 2)
+ n = 300; noise = 0.05;
+ seed = 1782;
+ theta <- seq(0, pi, length.out = n / 2)
  x1 <- cos(theta) + rnorm(n / 2, sd = noise)
  y1 <- sin(theta) + rnorm(n / 2, sd = noise)
  x2 <- cos(theta + pi) + rnorm(n / 2, sd = noise)
@@ -33,4 +32,5 @@ theta <- seq(0, pi, length.out = n / 2)
  y <- c(rep(0, n / 2), rep(1, n / 2))
 
 cat("dbcv(X, y) = ", dbcv(X, y), "\n", sep="")
+
 }
