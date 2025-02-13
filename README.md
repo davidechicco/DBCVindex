@@ -27,6 +27,7 @@ To run `DBCVindex()`,  you need a data parameter and its associated clustering l
 An example on a random matrix:
 
     library("pacman")
+    p_load("dbscan")
     p_load("DBCVindex")
 
     n = 300
@@ -37,10 +38,12 @@ An example on a random matrix:
     y1 <- sin(theta) + rnorm(n / 2, sd = noise)
     x2 <- cos(theta + pi) + rnorm(n / 2, sd = noise)
     y2 <- sin(theta + pi) + rnorm(n / 2, sd = noise)
-    X <- rbind(cbind(x1, y1), cbind(x2, y2))
-    y <- c(rep(0, n / 2), rep(1, n / 2))
+    X <- rbind(cbind(x1, y1), cbind(x2, y2)) # generate the X artificial data
 
-    cat("dbcv_index(X, y) = ", dbcv_index(X, y), " in the [-1;+1] interval\n", sep="")
+    these_minimal_points <- 2
+    hdbscan_clusters <- hdbscan(X, minPts = these_minimal_points)   # we apply HDBSCAN to X
+
+    cat("dbcv_index(X, hdbscan_clusters) = ", dbcv_index(X, hdbscan_clusters), " in the [-1;+1] interval\n", sep="")
 
 ## Contacts ##
 
