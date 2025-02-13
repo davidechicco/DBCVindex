@@ -2,7 +2,7 @@
 
 ## Summary ##
 
-R package that computes the Density-Based Clustering Validation index (DBCV) index of clustering results, following the <https://github.com/FelSiq/DBCV> Python implementation by Felipe Alves Siqueira (@FelSiq).
+R package that computes the Density-Based Clustering Validation index (DBCV) index of clustering results, following the [clusterConfusion](https://github.com/pajaskowiak/clusterConfusion/blob/devel/R/dbcv.R) R implementation by Pablo Andretta Jaskowiak.
 The `dbcv()` function returns a value in the [-1;+1] interval: the higher, the better.
 
 ## Installation ##
@@ -14,7 +14,6 @@ To run `DBCVindex()`, you need to have the following programs and packages insta
 
 You can install the `DBCVindex` package and its dependencies from [CRAN](https://cran.r-project.org/web/packages/DBCVindex/), and load it, with the following commands typed in the `R` terminal console:
 
-    R
     list.of.packages <- c("pacman")
     new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
     if(length(new.packages)) install.packages(new.packages, repos='http://cran.us.r-project.org')

@@ -162,7 +162,7 @@ dbcv(X, y) = -0.7361154
 > cleanEx()
 > options(digits = 7L)
 > base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
-Time elapsed:  0.602 0.015 0.617 0 0 
+Time elapsed:  0.542 0.158 0.525 0 0 
 > grDevices::dev.off()
 null device 
           1 

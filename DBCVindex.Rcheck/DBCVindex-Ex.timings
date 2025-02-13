@@ -1,4 +1,4 @@
 name	user	system	elapsed
-MST_Edges	0.078	0.004	0.082	
-dbcv	0.222	0.001	0.224	
-matrix_mutual_reachability_distance	0.060	0.000	0.061	
+MST_Edges	0.067	0.003	0.070	
+dbcv	0.179	0.000	0.180	
+matrix_mutual_reachability_distance	0.052	0.001	0.052	
