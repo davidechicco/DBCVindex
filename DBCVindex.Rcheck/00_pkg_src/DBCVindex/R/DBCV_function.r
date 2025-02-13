@@ -151,9 +151,9 @@ MST_Edges <- function(G, start, G_edges_weights) {
 #'  X <- rbind(cbind(x1, y1), cbind(x2, y2))
 #'  y <- c(rep(0, n / 2), rep(1, n / 2))
 #'
-#' cat("dbcv(X, y) = ", dbcv(X, y), "\n", sep="")
+#' cat("dbcv_index(X, y) = ", dbcv_index(X, y), "\n", sep="")
 #'
-dbcv <- function(data, partition, noiseLabel = -1) {
+dbcv_index <- function(data, partition, noiseLabel = -1) {
   clusters <- unique(partition)
   distX <- as.matrix(dist(data))^2
 

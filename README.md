@@ -2,7 +2,7 @@
 
 ## Summary ##
 
-R package that computes the Density-Based Clustering Validation index (DBCV) index of clustering results, following the [clusterConfusion](https://github.com/pajaskowiak/clusterConfusion/blob/devel/R/dbcv.R) R implementation by Pablo Andretta Jaskowiak.
+R package that computes the Density-Based Clustering Validation index (DBCV) index for assessing clustering results, following the R implementation of the `dbcv()` function of the  [clusterConfusion](https://github.com/pajaskowiak/clusterConfusion/blob/main/R/dbcv.R) software package by Pablo Andretta Jaskowiak.
 The `dbcv()` function returns a value in the [-1;+1] interval: the higher, the better.
 
 ## Installation ##
@@ -10,7 +10,6 @@ The `dbcv()` function returns a value in the [-1;+1] interval: the higher, the b
 To run `DBCVindex()`, you need to have the following programs and packages installed in your computer:
 
 * R (version > 4.0)
-* R packages: `Matrix` `pacman` `stats`
 
 You can install the `DBCVindex` package and its dependencies from [CRAN](https://cran.r-project.org/web/packages/DBCVindex/), and load it, with the following commands typed in the `R` terminal console:
 

@@ -66,16 +66,16 @@ mst_results <- MST_Edges(G, g_start, mr$G_edges_weights)
 base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
 base::cat("MST_Edges", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
-nameEx("dbcv")
-### * dbcv
+nameEx("dbcv_index")
+### * dbcv_index
 
 flush(stderr()); flush(stdout())
 
 base::assign(".ptime", proc.time(), pos = "CheckExEnv")
-### Name: dbcv
+### Name: dbcv_index
 ### Title: Function that calculates the Density-Based Clustering Validation
 ###   index (DBCV) of clustering results
-### Aliases: dbcv
+### Aliases: dbcv_index
 
 ### ** Examples
 
@@ -90,13 +90,13 @@ base::assign(".ptime", proc.time(), pos = "CheckExEnv")
  X <- rbind(cbind(x1, y1), cbind(x2, y2))
  y <- c(rep(0, n / 2), rep(1, n / 2))
 
-cat("dbcv(X, y) = ", dbcv(X, y), "\n", sep="")
+cat("dbcv_index(X, y) = ", dbcv_index(X, y), "\n", sep="")
 
 
 
 
 base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
-base::cat("dbcv", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+base::cat("dbcv_index", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("matrix_mutual_reachability_distance")
 ### * matrix_mutual_reachability_distance

@@ -1,5 +1,5 @@
 export(MST_Edges)
-export(dbcv)
+export(dbcv_index)
 export(matrix_mutual_reachability_distance)
 import(qpdf)
 importFrom(stats, dist)
