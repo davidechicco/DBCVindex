@@ -43,7 +43,8 @@ An example on a random matrix:
     these_minimal_points <- 4
     hdbscan_clusters <- hdbscan(X, minPts = these_minimal_points)$cluster   # we apply HDBSCAN to X
 
-    cat("dbcv_index(X, hdbscan_clusters) = ", dbcv_index(X, hdbscan_clusters), " in the [-1;+1] interval\n", sep="")
+    cat("dbcv_index(X, hdbscan_clusters) = ", dbcv_index(X, hdbscan_clusters),
+           " in the [-1;+1] interval\n", sep="")
 
 ## Contacts ##
 
