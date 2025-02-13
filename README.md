@@ -29,6 +29,8 @@ An example on a random matrix:
     library("pacman")
     p_load("dbscan")
     p_load("DBCVindex")
+    this_seed  <- 10
+    set.seed(this_seed)
 
     n = 300
     noise = 0.05
