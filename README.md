@@ -40,8 +40,8 @@ An example on a random matrix:
     y2 <- sin(theta + pi) + rnorm(n / 2, sd = noise)
     X <- rbind(cbind(x1, y1), cbind(x2, y2)) # generate the X artificial data
 
-    these_minimal_points <- 2
-    hdbscan_clusters <- hdbscan(X, minPts = these_minimal_points)   # we apply HDBSCAN to X
+    these_minimal_points <- 4
+    hdbscan_clusters <- hdbscan(X, minPts = these_minimal_points)$cluster   # we apply HDBSCAN to X
 
     cat("dbcv_index(X, hdbscan_clusters) = ", dbcv_index(X, hdbscan_clusters), " in the [-1;+1] interval\n", sep="")
 
