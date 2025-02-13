@@ -40,7 +40,7 @@ An example on a random matrix:
     X <- rbind(cbind(x1, y1), cbind(x2, y2))
     y <- c(rep(0, n / 2), rep(1, n / 2))
 
-    cat("dbcv(X, y) = ", dbcv(X, y), "\n", sep="")
+    cat("dbcv_index(X, y) = ", dbcv(X, y), "\n", sep="")
 
 ## Contacts ##
 
