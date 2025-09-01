@@ -1,0 +1,14 @@
+bibentry("Article",
+         title = "The DBCV index is more informative than DCSI, CDbw, and VIASCKDE indices for unsupervised clustering internal assessment of concave-shaped and density-based clusters",
+         author = c(person(family="Chicco", given="Davide"),
+                              person(family="Sabino", given="Giuseppe"),
+                              person(family="Oneto", given="Luca"),
+                              person(family="Jurman", given="Giuseppe")),
+         journal = "PeerJ Computer Science",
+         year         = "2025",
+         volume       = "11",
+         number       = "e3095",
+         pages        = "1-37",
+         url          = "https://doi.org/10.7717/peerj-cs.3095",
+         doi = "10.7717/peerj-cs.3095"
+         )

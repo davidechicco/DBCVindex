@@ -1,7 +1,10 @@
 MST_Edges               Function that finds the list of MST edges
-dbcv_index              Function that calculates the Density-Based
-                        Clustering Validation index (DBCV) of
-                        clustering results
+dbcv_index              Function that calculates the original
+                        Density-Based Clustering Validation index
+                        (DBCV) of clustering results between -1 and +1
 matrix_mutual_reachability_distance
                         Function that calculates the mutual
                         reachability distance within a matrix
+norm_dbcv_index         Function that calculates the normalized
+                        Density-Based Clustering Validation index
+                        (DBCV) of clustering results between 0 and 1

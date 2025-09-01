@@ -48,6 +48,14 @@ An example on a random matrix:
     cat("dbcv_index(X, hdbscan_clusters) = ", dbcv_index(X, hdbscan_clusters),
            " in the [-1;+1] interval\n", sep="")
 
+
+## Article ##
+
+More information about this study can be found in the following article:
+
+> Davide Chicco​, Giuseppe Sabino, Luca Oneto, and Giuseppe Jurman, ["The DBCV index is more informative than DCSI, CDbw, and VIASCKDE indices for unsupervised clustering internal assessment of concave-shaped and density-based clusters"](https://doi.org/10.7717/peerj-cs.3095), _PeerJ Computer Science_ 11:e3095. [https://doi.org/10.7717/peerj-cs.3095](https://doi.org/10.7717/peerj-cs.3095)
+
+
 ## Contacts ##
 
 The `DBCVindex` package was developed by [Davide Chicco](https://www.DavideChicco.it). Questions should be addressed to davidechicco(AT)davidechicco.it

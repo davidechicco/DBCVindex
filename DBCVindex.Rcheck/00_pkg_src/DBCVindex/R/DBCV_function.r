@@ -131,7 +131,7 @@ MST_Edges <- function(G, start, G_edges_weights) {
 }
 
 
-#' Function that calculates the Density-Based Clustering Validation index (DBCV) of clustering results
+#' Function that calculates the original Density-Based Clustering Validation index (DBCV) of clustering results between -1 and +1
 #'
 #' @param data input clustering results
 #' @param partition labels of the clustering
@@ -238,3 +238,30 @@ dbcv_index <- function(data, partition, noiseLabel = -1) {
   return(valid)
 }
 
+#' Function that calculates the normalized Density-Based Clustering Validation index (DBCV) of clustering results between 0 and 1
+#'
+#' @param data input clustering results
+#' @param partition labels of the clustering
+#' @param noiseLabel the code of the noise cluster points, -1 by default
+#' @export
+#' @import qpdf
+#' @return a real value containing the normalized DBCV coefficient in the [0;1] interval
+#' @examples
+#'
+#'  n = 200; noise = 0.04;
+#'  seed = 1783;
+#'  theta <- seq(0, pi, length.out = n / 2)
+#'  x1 <- cos(theta) + rnorm(n / 2, sd = noise)
+#'  y1 <- sin(theta) + rnorm(n / 2, sd = noise)
+#'  x2 <- cos(theta + pi) + rnorm(n / 2, sd = noise)
+#'  y2 <- sin(theta + pi) + rnorm(n / 2, sd = noise)
+#'  X <- rbind(cbind(x1, y1), cbind(x2, y2))
+#'  y <- c(rep(0, n / 2), rep(1, n / 2))
+#'
+#' cat("dbcv_index(X, y) = ", dbcv_index(X, y), "\n", sep="")
+#'
+norm_dbcv_index <- function(data, partition, noiseLabel = -1) {
+
+  result <- (dbcv_index(data, partition, noiseLabel ) + 1) / 2
+  return(result)
+}

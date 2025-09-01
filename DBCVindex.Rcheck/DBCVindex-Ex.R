@@ -73,8 +73,8 @@ flush(stderr()); flush(stdout())
 
 base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: dbcv_index
-### Title: Function that calculates the Density-Based Clustering Validation
-###   index (DBCV) of clustering results
+### Title: Function that calculates the original Density-Based Clustering
+###   Validation index (DBCV) of clustering results between -1 and +1
 ### Aliases: dbcv_index
 
 ### ** Examples
@@ -137,6 +137,38 @@ mr <- matrix_mutual_reachability_distance(nuobjcl, distXy[objcl, objcl], nfeatur
 
 base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
 base::cat("matrix_mutual_reachability_distance", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+cleanEx()
+nameEx("norm_dbcv_index")
+### * norm_dbcv_index
+
+flush(stderr()); flush(stdout())
+
+base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+### Name: norm_dbcv_index
+### Title: Function that calculates the normalized Density-Based Clustering
+###   Validation index (DBCV) of clustering results between 0 and 1
+### Aliases: norm_dbcv_index
+
+### ** Examples
+
+
+ n = 200; noise = 0.04;
+ seed = 1783;
+ theta <- seq(0, pi, length.out = n / 2)
+ x1 <- cos(theta) + rnorm(n / 2, sd = noise)
+ y1 <- sin(theta) + rnorm(n / 2, sd = noise)
+ x2 <- cos(theta + pi) + rnorm(n / 2, sd = noise)
+ y2 <- sin(theta + pi) + rnorm(n / 2, sd = noise)
+ X <- rbind(cbind(x1, y1), cbind(x2, y2))
+ y <- c(rep(0, n / 2), rep(1, n / 2))
+
+cat("dbcv_index(X, y) = ", dbcv_index(X, y), "\n", sep="")
+
+
+
+
+base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+base::cat("norm_dbcv_index", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 ### * <FOOTER>
 ###
 cleanEx()
